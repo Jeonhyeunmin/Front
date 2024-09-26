@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t12_menu.html</title>
+  <style>
+    .dropdown{
+      position: relative;
+    }
+    .dropdown-menu{
+      display: none;
+      position: absolute;
+      background-color: blanchedalmond;
+    }
+    .dropdown:hover .dropdown-menu{
+      display: block;
+      background-color: aquamarine;
+    }
+    .dropdown-menu{
+      display: none;
+      position: absolute;
+      background-color: antiquewhite;
+      border: 1px solid #ddd;
+    }
+    .sub-menu{
+      padding: 5px;
+    }
+    .sub-menu:hover{
+      background-color: blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <h2>Drop Down 메뉴 연습</h2>
+  <p>아래 메뉴에 마우스를 올려보세요.</p>
+  <div class="dropdown">
+    <span>Menu</span>
+    <div class="dropdown-menu">
+      <p>
+          <div class="sub-menu">1.어디로 갈까요?</div>
+          <div class="sub-menu">2.어디로 갈까요?</div>
+          <div class="sub-menu">3.어디로 갈까요?</div>
+    </p>
+  </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+body{
+  margin: 0;
+  font-size: 0.8em;
+}
+.container{
+  display: grid;
+  grid-template-columns: 180px auto 150px;
+  grid-template-rows: 100px auto 100px;
+  justify-content: space-evenly;
+}
+
+.item{
+  padding: 10px;
+  text-align: center;
+}
+
+.item1{background-color: #aaa;}
+.item2{background-color: #aab;}
+.item3{background-color: #aac;}
+.item4{background-color: #aad;}
+.item5{background-color: #aae;}
+.item6{background-color: #aaf;}
+.item7{background-color: #aaf;}
+.item8{background-color: #abf;}
+.item9{background-color: #acf;}
