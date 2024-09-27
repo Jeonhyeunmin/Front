@@ -3,33 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>t15_animation.html</title>
+  <title>t15_animation4.html</title>
   <style>
-    div{
-      position: relative;
+    div {
       width: 100px;
       height: 100px;
       background-color: red;
-      animation-name: logo;
+      position: relative;
+      animation: logo;
       animation-duration: 4s;
-      animation-delay: 0.5s;
-      /*animation-iteration-count: 3;*/
+      /* animation-delay: -2s; */
+      /* animation-iteration-count: 3; */
       animation-iteration-count: infinite;
-      /*animation-direction: reverse;*/
+      /* animation-direction: reverse; */
       animation-direction: alternate;
     }
+
     @keyframes logo {
-      0%{background-color: red; left: 0px; top: 0px;}
-      25%{background-color: yellow; left: 200px; top: 0px;}
-      50%{background-color: brown; left: 200px; top: 200px;}
-      75%{background-color: blue; left: 0px; top: 200px;}
-      100%{background-color: black; left: 0px; top: 0px;}
+      0% {background-color: red; left: 0px; top: 0px;}
+      25% {background-color: yellow; left: 200px; top: 0px;}
+      50% {background-color: green; left: 200px; top: 200px;}
+      75% {background-color: blue; left: 0px; top: 200px;}
+      100% {background-color: red; left: 0px; top: 0px;}
     }
   </style>
 </head>
 <body>
   <h2>Animation Effect</h2>
-  <div></div>  
+  <div></div>
   제자리에서 색이 변화됩니다.
 </body>
 </html>

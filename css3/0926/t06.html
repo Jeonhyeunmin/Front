@@ -5,54 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>t06.html</title>
   <style>
-    body{
+    body {
       margin: 0px;
       padding: 0px;
     }
-    .container{
+    .container {
       margin: 0px auto;
       width: 600px;
       height: 800px;
     }
-    .top-menu{
+    .top-menu {
       width: 600px;
       height: 80px;
+      border: 0px solid gray;
       background-color: antiquewhite;
+    }
+    .content-main .left-menu {
+      float: left;
+      width: 100px;
+      height: 720px;
+      border: 0px solid gray;
+      background-color: aqua;
     }
     .content-main .content {
       float: left;
       width: 500px;
       height: 720px;
-      background-color: brown;
+      border: 0px solid gray;
+      background-color: blue;
     }
-
-    .content-main .left-menu {
-      float: left;
-      width: 100px;
-      height: 720px;
-      background-color: bisque;
-    }    
-    
-    .content-main .content .section{
+    .content-main .content .section {
       float: left;
       width: 500px;
       height: 620px;
-      background-color: blueviolet;
+      border: 0px solid gray;
+      background-color: chocolate;
     }
-
-    .content-main .content .article{
+    .content-main .content .article {
       clear: both;
       width: 500px;
       height: 100px;
-      background-color: blue;
+      border: 0px solid gray;
+      background-color: darkblue;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="top-menu">Top menu</div>
+    <div class="top-menu">Top Menu</div>
     <div class="content-main">
-      <div class="left-menu"></div>
+      <div class="left-menu">Left-menu</div>
       <div class="content">
         <div class="section">Section</div>
         <div class="article">Article</div>

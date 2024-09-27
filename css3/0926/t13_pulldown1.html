@@ -3,41 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>t13_pulldown.html</title>
-<style>
-  body{
-    margin: 0;
-    padding: 0;
-  }
-  nav ul li{
-    list-style-type: none;
-    padding: 0px;
-  }
-  a{
-    text-decoration: none;
-  }
-  nav{
-    text-align: center;
-  }
-  nav > ul{
-    background-color: aqua;
-    padding: 0 10px;
-  }
-  nav > ul > li{
-    display: inline-block;
-    margin: 0px;
-    width: 100px;
-    padding: 10px;
-  }
-  nav > ul > li:hover{
-    background-color: blueviolet;
-    color: white;
-  }
-  nav > ul > li:hover a{
-    background-color: blueviolet;
-    color: white;
-  }
-</style>
+  <title>t13_pulldown1.html</title>
+  <style>
+    /* css reset 설정 */
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+    nav ul li {
+      list-style-type: none;
+      padding: 0px;
+    }
+    a {
+      /* text-decoration: none; */
+      text-decoration: inherit;
+    }
+
+    /* 주메뉴 설정 */
+    nav {
+      text-align: center;
+    }
+    nav > ul {
+      background-color: aqua;
+      padding: 0px 10px;
+    }
+    nav > ul > li {
+      display: inline-block;
+      margin: 0px;
+      padding: 10px;
+      width: 100px;
+    }
+    nav > ul > li:hover {
+      background-color: burlywood;
+    }
+    nav > ul > li:hover a {
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
   <nav>

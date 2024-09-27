@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>t09_menu.html</title>
+  <title>t10_menu.html</title>
   <style>
     body {
       margin: 0px;
@@ -16,9 +16,10 @@
     ul li {
       background-color: #ddd;
       width: 80px;
-      display: block;
+      /* display: inline-block; */
+      float: left;
       padding: 10px;
-      border-bottom: 1px solid #ccc;
+      border-right: 1px solid #ccc;
       text-align: center;
     }
     ul li:hover {
@@ -26,6 +27,9 @@
     }
     a {
       text-decoration: none;
+    }
+    .content {
+      clear: both;
     }
   </style>
 </head>
@@ -36,6 +40,6 @@
     <li><a href="#">Board</a></li>
     <li><a href="#">Pds</a></li>
   </ul>
-  <p>메뉴를 구성해 봅니다.</p>
+  <p class="content">메뉴를 구성해 봅니다.</p>
 </body>
 </html>

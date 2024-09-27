@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t20_MediaQuery.html</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <style>
+    body{
+      font-family: "Neo Sans Pro Medium";
+      margin: 0px;
+      padding: 0px;
+    }
+    .container{
+      width: 1000px;
+      margin: 0 auto;
+      font-size: 1.5em;
+      background-color: #eee;
+      border: 2px solid gray;
+    }
+    div#area{
+      animation: image;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      width: 960px;
+      height: 350px;
+      margin: 0 auto;
+    }
+    #tbl{
+      background-color: aliceblue;
+      margin: 0 auto;
+      height: 450px;
+      width: 960px;
+      border-collapse: collapse;
+    }
+    th, td{
+      border: 1px solid #bbb;
+      text-align: center;
+    }
+    div#img{
+      text-align: center;
+    }
+    div#img img{
+      margin: 0px;
+      padding: 0px;
+      width: 960px;
+      /* overflow: auto; */
+    }
+    @keyframes image {
+      0% {background-image: url(../../images/11.jpg);}
+      25% {background-image: url(../../images/12.jpg)}
+      50% {background-image: url(../../images/13.jpg)}
+      75% {background-image: url(../../images/14.jpg)}
+      100% {background-image: url(../../images/11.jpg)}
+    }
+
+
+    /* 미디어 쿼리 */
+    /*screen width >=1024px (max-width < 1024px == max-width:1024px)*/
+    @media screen and (max-width:1024px){
+        .container{
+        width: 700px;
+        margin: 0 auto;
+        font-size: 1em;
+        background-color: #eee;
+        border: 2px solid gray;
+      }
+      div#area{
+        background-color: chocolate;
+        width: 680px;
+        height: 400px;
+        margin: 0 auto;
+      }
+      #tbl{
+        background-color: aliceblue;
+        margin: 0 auto;
+        height: 250px;
+        width: 680px;
+        border-collapse: collapse;
+      }
+      div#img{
+        text-align: center;
+      }
+      div#img img{
+        margin: 0px;
+        padding: 0px;
+        width: 680px;
+        /* overflow: auto; */
+      }
+    }
+
+    @media screen and (max-width:400px){
+        .container{
+        width: 260px;
+        margin: 0 auto;
+        font-size: 0.5em;
+        background-color: #eee;
+        border: 1px solid gray;
+      }
+      div#area{
+        background-color: pink;
+        animation: color;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        width: 260px;
+        height: 100px;
+        margin: 0 auto;
+      }
+      #tbl{
+        background-color: aliceblue;
+        margin: 0 auto;
+        width: 260px;
+        height: 120px;
+        border-collapse: collapse;
+      }
+      div#img{
+        text-align: center;
+      }
+      div#img img{
+        
+        margin: 0px;
+        padding: 0px;
+        width: 260px;
+        /* overflow: auto; */
+      }
+      @keyframes color {
+      0% {background-color: pink;}
+      25% {background-color: yellow;}
+      50% {background-color: orange;}
+      75% {background-color: yellow;}
+      100% {background-color: pink;}
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>미디어쿼리 연습 56번 현민</h2>
+    <p>(반응형 웹 사이트 : Responsive web Design)</p>
+
+    <hr>
+    <ul>
+      <li>데스크탑 : 1024px(1200px) 이상</li>
+      <li>태블릿 : 768px(992px) ~ 데스크탑</li>
+      <li>모바일 : 768px 이하(576px)</li>
+    </ul>
+    <hr>
+    <div>이곳은 반응형 웹 사이트를 위한 화면입니다.</div>
+    <hr>
+    <div id="area"></div>
+    <hr>
+    <table id="tbl">
+      <tr>
+        <th>주제</th>
+        <th>강사</th>
+        <th>장소</th>
+      </tr>
+      <tr>
+        <td>웹 표준에 대하여</td>
+        <td>홍길동</td>
+        <td>그린아카데미</td>
+      </tr>
+      <tr>
+        <td>Java 프로그래밍</td>
+        <td>김영민</td>
+        <td>그린 402호</td>
+      </tr>
+    </table>
+    <hr>
+    <div id="img">
+      <img src="../../images/16.jpg">
+    </div>
+  </div>
+</body>
+</html>

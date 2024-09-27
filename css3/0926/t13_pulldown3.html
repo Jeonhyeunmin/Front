@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>t13_pulldown2.html</title>
+  <title>t13_pulldown3.html</title>
   <style>
     /* css reset 설정 */
     body {
@@ -32,6 +32,7 @@
       margin: 0px;
       padding: 10px;
       width: 100px;
+      position: relative;
     }
     nav > ul > li:hover {
       background-color: burlywood;
@@ -43,9 +44,13 @@
     /* 서브메뉴 */
     nav ul li ul {
       display: none;
+      position: absolute;
+      width: 100px;
+      width: 100px;
     }
     nav ul li:hover > ul {
       display: block;
+      background-color: aquamarine;
     }
 
   </style>
