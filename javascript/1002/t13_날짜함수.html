@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t13_날짜함수.html</title>
+  <script>
+    'use strict';
+    let cnt = 0;
+    // 오늘 날짜 : Date()
+    const today = new Date();
+    console.log(++cnt, " : ", today);
+    
+    // 연도 4자리
+    const year = today.getFullYear();
+    const month = today.getMonth()+1;
+    const date = today.getDate();
+    const hour = today.getHours();
+    const minute = today.getMinutes();
+    const second = today.getSeconds();
+    const yymmdd = year + "-" + month + "-" + date + " / " + hour + " : " + minute + " : " + second;
+
+    console.log(++cnt, " : ", year);
+    console.log(++cnt, " : ", month);
+    console.log(++cnt, " : ", date);
+    console.log(++cnt, " : ", hour);
+    console.log(++cnt, " : ", minute);
+    console.log(++cnt, " : ", second);
+    console.log(++cnt, " : ", yymmdd);
+
+    // 요일 : 일요일 : 0 ~ 토요일 : 7
+    let weekStr = today.getDay();
+    let week = ['일', '월', '화', '수', '목', '금', '토'];
+    console.log(++cnt, " : ", weekStr);
+    console.log(++cnt, " : ", week[weekStr] + '요일');
+
+    // 해당 월의 마지막 일자
+    let lastDate = new Date(2024, 2, 0);
+    console.log("10월의 마지막 날 : ", lastDate);
+
+    function dateCheck(){
+
+    }
+  </script>
+</head>
+<body>
+  <h2>날짜함수 연습</h2>
+  <form name="myform">
+    <div class="mb-2">년도
+      <input type="number" name="yy" id="yy" value="2024" class="form-control" autofocus>
+    </div>
+    <div class="mb-2">월
+      <input type="number" name="mm" id="mm" value="10" class="form-control">
+    </div>
+    <div class="mb-2">
+      <input type="button" value="마지막 일자 출력" onclick="dataCheck()" class="btn btn-success form-control">
+    </div>
+  </form>
+  <hr>
+  <div id="demo"></div>
+</body>
+</html>
