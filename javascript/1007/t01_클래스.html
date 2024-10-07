@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t01_클래스.html</title>
+  <script>
+    'use strict'
+    class Member {
+      name;
+      age;
+
+      // 생성자(기본생성자)(자바스킵트에서는 생성자는 1개만 생성할 수 있다.)
+      // constructor(){}
+
+      constructor(name, age){
+        this.name = name;
+        this.age = age;
+      }
+
+      // 메소드
+      memberPrint(){
+        let job = '학생';
+        console.log("성명 : " + this.name + " , 나이 : " + this.age , ", 직업 : " + job);
+      }
+    }
+    let member = new Member("홍길동", 25);
+    
+    console.log("성명 : " + member.name, " , 나이 : " + member.age);
+    member.memberPrint();
+  </script>
+</head>
+<body>
+  <h2>클래스 연습</h2>
+  
+</body>
+</html>
