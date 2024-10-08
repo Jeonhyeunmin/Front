@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t27.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    #tot{
+      padding: 17px;
+    }
+  </style>
+  <script>
+    'use strict'
+    let cnt = 0;
+    let pay = 0;
+    let surtax = 0;
+    let totalPay = 0;
+    let totP = 0;
+
+    function price(){
+      pay = document.getElementById('size').value * document.getElementById('count').value;
+      demo1.innerHTML = numberWithCommas(pay);
+    }
+    function vat(){
+      surtax = document.getElementById('size').value * 0.1;
+      demo2.innerHTML = numberWithCommas(surtax);
+    }
+    function tot(){
+      totalPay = pay + surtax;
+      demo3.innerHTML = numberWithCommas(totalPay);
+    }
+    function cart(){
+      price();
+      vat();
+      tot();
+      cnt++;
+      let backet = ''; 
+      backet += cnt + ". <br/>"
+      backet += "상품명 : " + document.getElementById('product').value + "<br/>";
+      backet += "가격 : " + numberWithCommas(totalPay) + "<br/>";
+      totP += totalPay;
+      shop.innerHTML += backet + "<br/>";
+      totPay.innerHTML = numberWithCommas(totP);
+    }
+    function cartClear(){
+      shop.innerHTML = "";
+      totPay.innerHTML = 0;
+      cnt=0;
+    }
+    function numberWithCommas(num) {
+      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+  </script>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h2>상품 가격 계산</h2>
+  <form action="#" name="myform">
+      상품명
+      <input type="text" name="product" id="product" class="form-control">
+      사이즈
+      <select name="size" id="size" class="form-control">
+        <option value="5000">1. S Size(5,000)</option>
+        <option value="10000">2. M Size(10,000)</option>
+        <option value="15000">3. L Size(15,000)</option>
+        <option value="20000">4. XL Size(20,000)</option>
+      </select>
+      수량
+      <input type="number" min="1" value="1" name="count" id="count" class="form-control">
+      <input type="button" value="가격" onclick="price()" class="btn btn-success mt-2"></input>
+      <input type="button" value="VAT" onclick="vat()" class="btn btn-primary mt-2"></input>
+      <input type="button" value="총 금액" onclick="tot()" class="btn btn-info mt-2"></input>
+      <input type="button" value="장바구니 비우기" onclick="cartClear()" class="btn btn-danger mt-2" style="float: right;"></input>
+      <input type="button" value="장바구니" onclick="cart()" class="btn btn-warning mt-2 mr-2" style="float: right;"></input>
+  </form>
+  <div id="tot" class="mt-5 border" style="width: 100%; height: 150px; background-color: rgb(238, 238, 238);">
+    <div>☞ 가격(단가 * 수량) : <span id="demo1"></span>원</div><br>
+    <div>☞ VAT(가격의 10%) : <span id="demo2"></span>원</div><br>
+    <div>☞ 총 판매 금액(VAT 포함) : <span id="demo3"></span>원</div><br>
+  </div>
+  <div class="mt-5" style="width: 100%; background-color: rgb(238, 238, 238);">
+    <h2 style="text-align: center;">장바구니</h2>
+    <div id="shop"></div>
+    <div>총 금액 : <span id="totPay"></span>원</div>
+  </div>
+</div>
+</body>
+</html>
